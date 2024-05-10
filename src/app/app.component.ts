@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../interface/Product';
 import { Student } from '../interface/Student';
+import axios from 'axios';
 
 @Component({
   selector: 'app-root',
@@ -49,4 +50,7 @@ export class AppComponent {
       className: 'r343242',
     },
   ];
+  addStudent = (data: Student) => {
+    this.students.push(data);
+  };
 }

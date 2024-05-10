@@ -1,0 +1,36 @@
+<div class="w-[500px] border-1 mx-auto">
+  <h1>Add student</h1>
+  <input
+    type="text"
+    class="border-1"
+    placeholder="Name "
+    [(ngModel)]="name"
+  />
+  <input
+    type="number"
+    class="border-1"
+    placeholder="Age"
+    [(ngModel)]="age"
+  />
+  <input
+    type="string"
+    class="border-1"
+    placeholder="Address"
+    [(ngModel)]="address"
+  />
+  <input
+    type="string"
+    class="border-1"
+    placeholder="Class Name"
+    [(ngModel)]="className"
+  />
+
+  <button
+    type="button"
+    (click)="onAddStudent()"
+    class="px-6 py-3 bg-red-600 text-white"
+    [ngStyle]="{ backgroundColor: 'green', color: 'white', padding: '10px' }"
+  >
+    Add
+  </button>
+</div>
