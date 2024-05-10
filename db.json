@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "42342",
+      "image": "423423",
+      "price": "0423423",
+      "id": 1
+    },
+    {
+      "name": "rưerewrew",
+      "image": "rewrwerew",
+      "price": "rwerwrwerw",
+      "id": 2
+    },
+    {
+      "name": "4324324",
+      "image": "4324324",
+      "price": "043243242",
+      "id": 3
+    }
+  ]
+}

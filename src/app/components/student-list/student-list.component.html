@@ -1,0 +1,20 @@
+<table class="w-full my-6">
+  <thead class="bg-[#ccc]">
+    <tr>
+      <th class="p-2 border">STT</th>
+      <th class="p-2 border">Name</th>
+      <th class="p-2 border">Age</th>
+      <th class="p-2 border">Address</th>
+      <th class="p-2 border">Class Name</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr *ngFor="let student of students; index as i">
+      <td class="border p-2">{{ i }}</td>
+      <td class="border p-2">{{ student.name }}</td>
+      <td class="border p-2">{{ student.age }}</td>
+      <td class="border p-2">{{ student.address }}</td>
+      <td class="border p-2">{{ student.className }}</td>
+    </tr>
+  </tbody>
+</table>

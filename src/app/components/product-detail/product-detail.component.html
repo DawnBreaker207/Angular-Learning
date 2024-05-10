@@ -3,3 +3,32 @@
   <h1 class="text-[26px]">{{ product.title }}</h1>
   <span class="price">{{ product.price }}</span>
 </div>
+<div class="w-[500px] border-1 mx-auto">
+  <input
+    type="text"
+    class="border-1"
+    placeholder="Name product"
+    [(ngModel)]="productName"
+  />
+  <input
+    type="text"
+    class="border-1"
+    placeholder="Image product"
+    [(ngModel)]="image"
+  />
+  <input
+    type="numbwr"
+    class="border-1"
+    placeholder="Price product"
+    [(ngModel)]="price"
+  />
+  <p>{{ productName }}</p>
+  <button
+    type="button"
+    (click)="onClick()"
+    class="px-6 py-3 bg-red-600 text-white"
+    [ngStyle]="{ backgroundColor: 'green', color: 'white', padding: '10px' }"
+  >
+    Add
+  </button>
+</div>
