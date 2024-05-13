@@ -1,0 +1,36 @@
+<div class="w-[500px] border-1 mx-auto font-bold my-7">
+  <h1 class="uppercase text-2xl text-center">Add student</h1>
+  <div
+    class="flex flex-col my-8 gap-5 [&>*]:rounded-3xl [&>*:not(:last-child)]:border-2 [&>*:not(:last-child)]:px-5 [&>*:not(:last-child)]:py-3 focus:[&>*]:outline-none"
+  >
+    <input
+      type="text"
+      class="border-1"
+      placeholder="Name"
+      [(ngModel)]="title"
+    />
+    <input
+      min="1"
+      type="number"
+      class="border-1"
+      placeholder="Price"
+      [(ngModel)]="price"
+    />
+
+    <input
+      type="file"
+      class="block w-full mb-5 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+      placeholder="Image"
+      [(ngModel)]="thumbnail"
+      (change)="onCheck($event)"
+    />
+
+    <button
+      type="button"
+      (click)="onAddProduct()"
+      class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white"
+    >
+      Add
+    </button>
+  </div>
+</div>

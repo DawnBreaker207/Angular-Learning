@@ -53,4 +53,8 @@ export class AppComponent {
   addStudent = (data: Student) => {
     this.students.push(data);
   };
+  products: Product[] = [];
+  addProduct = (data: Product) => {
+    this.products.push(data);
+  };
 }
