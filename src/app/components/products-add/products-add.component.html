@@ -1,6 +1,7 @@
 <div class="w-[500px] border-1 mx-auto font-bold my-7">
   <h1 class="uppercase text-2xl text-center">Add student</h1>
   <div
+    *ngIf="display; else content"
     class="flex flex-col my-8 gap-5 [&>*]:rounded-3xl [&>*:not(:last-child)]:border-2 [&>*:not(:last-child)]:px-5 [&>*:not(:last-child)]:py-3 focus:[&>*]:outline-none"
   >
     <input
@@ -24,8 +25,8 @@
       [(ngModel)]="thumbnail"
       (change)="onCheck($event)"
     />
-
     <button
+      *ngIf="display"
       type="button"
       (click)="onAddProduct()"
       class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white"
@@ -33,4 +34,17 @@
       Add
     </button>
   </div>
+
+  <ng-template #content>
+    <h1 class="text-[30px] text-center">Click here to add product</h1>
+  </ng-template>
+
+  <button
+    *ngIf="!display"
+    type="button"
+    (click)="display = !display"
+    class="my-5 px-6 py-3 bg-red-500 hover:bg-red-600 text-white w-full rounded-lg"
+  >
+    Show
+  </button>
 </div>

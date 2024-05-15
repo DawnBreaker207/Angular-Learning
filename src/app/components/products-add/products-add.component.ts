@@ -11,7 +11,7 @@ export class ProductsAddComponent {
   title: string = '';
   price: number = 0;
   thumbnail: string = '';
-
+  display: boolean = false;
   onAddProduct = () => {
     const data: Product = {
       title: this.title,
