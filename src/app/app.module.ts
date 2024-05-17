@@ -12,6 +12,8 @@ import { StudentAddComponent } from './components/student-add/student-add.compon
 import { ProductsComponent } from './components/products/products.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductsAddComponent } from './components/products-add/products-add.component';
+import { AdminComponent } from './layout/admin/admin.component';
+import { ClientComponent } from './layout/client/client.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,12 @@ import { ProductsAddComponent } from './components/products-add/products-add.com
     StudentAddComponent,
     ProductsComponent,
     ProductsListComponent,
-    ProductsAddComponent
+    ProductsAddComponent,
+    AdminComponent,
+    ClientComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

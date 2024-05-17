@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { Product } from '../../../interface/Product';
 
 @Component({
@@ -7,7 +7,8 @@ import { Product } from '../../../interface/Product';
   styleUrl: './products-add.component.css',
 })
 export class ProductsAddComponent {
-  @Input() addProduct: any;
+  // @Input() addProduct: any;
+  @Output() addProduct = new EventEmitter<Product>();
   title: string = '';
   price: number = 0;
   thumbnail: string = '';
@@ -18,7 +19,7 @@ export class ProductsAddComponent {
       price: this.price,
       thumbnail: this.thumbnail,
     };
-    this.addProduct(data);
+    this.addProduct.emit(data);
   };
   onCheck = (e: any) => {
     let reader = new FileReader();
