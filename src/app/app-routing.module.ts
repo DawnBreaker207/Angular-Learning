@@ -18,8 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: AdminComponent,
     children: [
+      { path: '', component: AdminComponent },
       { path: 'products', component: StudentListComponent },
       { path: 'add', component: StudentAddComponent },
     ],
