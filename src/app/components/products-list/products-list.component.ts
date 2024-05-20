@@ -9,10 +9,12 @@ import axios from 'axios';
 })
 export class ProductsListComponent {
   // @Input() products: Product[] = [];
+  loading: boolean = true;
   products: Product[] = [];
   async ngOnInit() {
     const { data } = await axios.get('http://localhost:3000/products');
     console.log(data);
     this.products = data;
+    this.loading = false;
   }
 }
