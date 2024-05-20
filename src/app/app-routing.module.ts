@@ -6,14 +6,16 @@ import { StudentListComponent } from './components/student-list/student-list.com
 import { StudentAddComponent } from './components/student-add/student-add.component';
 import { ProductsAddComponent } from './components/products-add/products-add.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ClientComponent,
     children: [
-      { path: 'list', component: ProductsListComponent },
+      { path: 'products', component: ProductsListComponent },
       { path: 'add', component: ProductsAddComponent },
+      { path: 'products/:id', component: ProductDetailComponent },
     ],
   },
   {

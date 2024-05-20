@@ -24,7 +24,7 @@ export class HeaderComponent {
     {
       id: 3,
       name: 'Products',
-      path: 'product',
+      path: '/products',
       parent: 0,
     },
     {

@@ -7,7 +7,7 @@
 
   @for(menu of menus; track menu.name){
   <li *ngIf="menu.parent === 0">
-    <a href="#">{{ menu.name }} </a>
+    <a href="{{ menu.path }}">{{ menu.name }} </a>
     <ul *ngIf="checkChildren(menu.id)" class="">
       @for(index of menus; track index.name ){
       <li *ngIf="index.parent === menu.id">
