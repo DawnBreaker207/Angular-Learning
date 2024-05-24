@@ -37,5 +37,6 @@ export class StudentListComponent {
       'http://localhost:3000/students',
       studentData
     );
+    console.log(data);
   };
 }

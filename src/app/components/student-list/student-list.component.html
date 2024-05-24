@@ -5,24 +5,24 @@
   <input type="email" placeholder="Email" formControlName="email" />
   <span
     *ngIf="
-      !studentForm.controls.email.valid &&
+      studentForm.controls.email.errors?.['required'] &&
       (studentForm.controls.email.dirty || studentForm.controls.email.touched)
     "
-    >Không đúng định dạng email</span
+    >Email required</span
   >
   <input type="text" placeholder="Adress" formControlName="address" />
   <input type="text" placeholder="Class Name" formControlName="className" />
   <input type="text" placeholder="Phone Number" formControlName="phoneNumber" />
   <span
     *ngIf="
-      !studentForm.controls.phoneNumber.valid &&
+      studentForm.controls.phoneNumber.errors?.['required'] &&
       (studentForm.controls.phoneNumber.dirty ||
         studentForm.controls.phoneNumber.touched)
     "
     >Not right format phone number</span
   >
 
-  <button type="submit" [disabled]="!studentForm.valid">Sumbit</button>
+  <button type="submit" [disabled]="studentForm.valid">Sumbit</button>
 </form>
 <table class="w-full my-6">
   <thead class="bg-[#ccc]">
