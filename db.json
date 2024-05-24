@@ -555,13 +555,15 @@
   ],
   "students": [
     {
+      "name": "4324234",
+      "age": 43,
+      "address": "ldieprroe",
+      "className": "idorieoe",
+      "phoneNumber": "094939584",
+      "email": "lmao@gmail.com",
       "id": 1
     },
     {
-      "name": "42432",
-      "age": 432432,
-      "address": "42342",
-      "className": "42342",
       "id": 2
     },
     {
@@ -664,12 +666,6 @@
       "id": 13
     },
     {
-      "name": "lmadod",
-      "age": 12,
-      "address": "432ldoire",
-      "className": "loire",
-      "phoneNumber": "08475935445",
-      "email": "lmao@gmail.com",
       "id": 14
     },
     {

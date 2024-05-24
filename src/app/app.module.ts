@@ -15,6 +15,7 @@ import { ProductsAddComponent } from './components/products-add/products-add.com
 import { AdminComponent } from './layout/admin/admin.component';
 import { ClientComponent } from './layout/client/client.component';
 import { RouterOutlet } from '@angular/router';
+import { StudentEditComponent } from './components/student-edit/student-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RouterOutlet } from '@angular/router';
     ProductsAddComponent,
     AdminComponent,
     ClientComponent,
+    StudentEditComponent,
   ],
   imports: [
     BrowserModule,
