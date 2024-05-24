@@ -552,5 +552,81 @@
         "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
       ]
     }
-  ]
+  ],
+  "students": [
+    {
+      "id": 1
+    },
+    {
+      "name": "42432",
+      "age": 432432,
+      "address": "42342",
+      "className": "42342",
+      "id": 2
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "age": 0,
+      "address": "",
+      "className": "",
+      "phoneNumber": "",
+      "email": "",
+      "id": 9
+    }
+  ],
+  "user": []
 }
