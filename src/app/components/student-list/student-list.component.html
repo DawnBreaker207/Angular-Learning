@@ -1,30 +1,5 @@
 <p-toast />
-<h1>Add new</h1>
-<form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="flex flex-col">
-  <input type="text" placeholder="Name" formControlName="name" />
-  <input type="number" placeholder="Age" formControlName="age" />
-  <input type="email" placeholder="Email" formControlName="email" />
-  <span
-    *ngIf="
-      studentForm.controls.email.errors?.['required'] &&
-      (studentForm.controls.email.dirty || studentForm.controls.email.touched)
-    "
-    >Email required</span
-  >
-  <input type="text" placeholder="Adress" formControlName="address" />
-
-  <input type="text" placeholder="Phone Number" formControlName="className" />
-  <span
-    *ngIf="
-      studentForm.controls.className.errors?.['required'] &&
-      (studentForm.controls.className.dirty ||
-        studentForm.controls.className.touched)
-    "
-    >Not right format phone number</span
-  >
-
-  <button type="submit" [disabled]="studentForm.valid">Sumbit</button>
-</form>
+<a href="dashboard/add">Add new</a>
 <table class="w-full my-6">
   <thead class="bg-[#ccc]">
     <tr>
@@ -36,12 +11,18 @@
     </tr>
   </thead>
   <tbody class="text-center">
-    <tr *ngFor="let student of students; index as i">
+    <tr *ngFor="let item of student; index as i">
       <td class="border p-2">{{ i }}</td>
-      <td class="border p-2">{{ student.name }}</td>
-      <td class="border p-2">{{ student.age }}</td>
-      <td class="border p-2">{{ student.address }}</td>
-      <td class="border p-2">{{ student.className }}</td>
+      <td class="border p-2">{{ item.name }}</td>
+      <td class="border p-2">{{ item.age }}</td>
+      <td class="border p-2">{{ item.address }}</td>
+      <td class="border p-2">{{ item.className }}</td>
+      <td class="border p-2">
+        <a href="/dashboard/edit/{{ item.id }}">Edit</a>
+      </td>
+      <td class="border p-2">
+        <a href="/dashboard/delete/{{ item.id }}">Delete</a>
+      </td>
     </tr>
   </tbody>
 </table>

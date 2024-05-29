@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import axios from 'axios';
 import { StudentService } from '../../student.service';
 import { MessageService } from 'primeng/api';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -13,6 +14,7 @@ import { MessageService } from 'primeng/api';
 export class StudentListComponent {
   // constructor(private StudentService: StudentService) {}
   constructor(
+    private route: ActivatedRoute,
     private StudentService: StudentService,
     private MessageService: MessageService
   ) {}
@@ -38,25 +40,20 @@ export class StudentListComponent {
     ]),
   });
   student: Student[] = [];
+  studentId = this.route.snapshot.params['id'];
   ngOnInit() {
-    // this.StudentService.Get_All_Students().subscribe((data) => {
-    //   console.log(data);
-    //   this.student = data;
-    // });
+    this.StudentService.Get_All_Students().subscribe((data) => {
+      console.log(data);
+      this.student = data;
+    });
   }
-  onSubmit = () => {
-    // Take data from form data
-    // const studentData = this.studentForm.value;
-    // const { data } = await axios.post(
-    //   'http://localhost:3000/students',
-    //   studentData
-    // );
 
-    this.StudentService.Add_Student(
-      this.studentForm.value as Student
-    ).subscribe((data) => {
-      console.log();
-      this.student.push(data as Student);
+  onSubmit = () => {
+    this.StudentService.Delete_Student(this.studentId).subscribe((data) => {
+      alert('Success');
+
+      console.log(this.studentId);
+      console.log(data);
       this.MessageService.add({
         severity: 'error',
         summary: 'Success',

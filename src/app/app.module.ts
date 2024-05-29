@@ -21,6 +21,7 @@ import { ClientComponent } from './layout/client/client.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { DeleteComponent } from './components/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ToastModule } from 'primeng/toast';
     AdminComponent,
     ClientComponent,
     StudentEditComponent,
+    DeleteComponent,
   ],
   imports: [
     BrowserModule,

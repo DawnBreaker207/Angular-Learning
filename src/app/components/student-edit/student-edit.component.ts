@@ -1,7 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
+import { StudentService } from '../../student.service';
+import { MessageService } from 'primeng/api';
+import { Student } from '../../../interface/Student';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import axios from 'axios';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-edit',
@@ -9,7 +11,11 @@ import axios from 'axios';
   styleUrl: './student-edit.component.css',
 })
 export class StudentEditComponent {
-  router = inject(ActivatedRoute);
+  constructor(
+    private route: ActivatedRoute,
+    private StudentService: StudentService,
+    private MessageService: MessageService
+  ) {}
   studentForm = new FormGroup({
     name: new FormControl('', [
       Validators.required,
@@ -22,36 +28,49 @@ export class StudentEditComponent {
       Validators.pattern('[0-9]+'),
     ]),
     address: new FormControl(''),
-    className: new FormControl(''),
-    phoneNumber: new FormControl('', Validators.pattern('0+[0-9](9)$')),
+    className: new FormControl('', Validators.required),
+    // phoneNumber: new FormControl('', Validators.pattern('0+[0-9](9)$')),
     email: new FormControl('', [
       Validators.required,
       Validators.email,
       Validators.maxLength(250),
     ]),
   });
-  async ngOnInit() {
-    const studentId = this.router.snapshot.params['id'];
-    const { data } = await axios.get(
-      `http://localhost:3000/students/${studentId}`
-    );
-    this.studentForm.controls.name.setValue(data.name);
-    this.studentForm.controls.age.setValue(data.age);
-    this.studentForm.controls.address.setValue(data.address);
-    this.studentForm.controls.className.setValue(data.className);
-    this.studentForm.controls.phoneNumber.setValue(data.phoneNumber);
-    this.studentForm.controls.email.setValue(data.email);
-    console.log(data);
+  student: Student[] = [];
+  studentId = this.route.snapshot.params['id'];
+  ngOnInit() {
+    this.StudentService.Get_Student_By_ID(this.studentId).subscribe((data) => {
+      console.log(data);
+      this.student = data;
+      this.studentForm.controls.name.setValue(data.name);
+      this.studentForm.controls.age.setValue(data.age);
+      this.studentForm.controls.address.setValue(data.address);
+      this.studentForm.controls.className.setValue(data.className);
+    });
   }
-  onSubmit = async () => {
-    // Take data from form data
-    const studentId = this.router.snapshot.params['id'];
-    const { data } = await axios.put(
-      `http://localhost:3000/students/${studentId}`,
-      this.studentForm.value
-    );
-    console.log(data);
 
-    alert(`Edit success`);
+  router = new Router();
+  onSubmit = () => {
+    // Take data from form data
+    // const studentData = this.studentForm.value;
+    // const { data } = await axios.post(
+    //   'http://localhost:3000/students',
+    //   studentData
+    // );
+
+    this.StudentService.Update_Student(
+      this.studentId,
+      this.studentForm.value as Student
+    ).subscribe((data) => {
+      console.log(data);
+      alert('Success');
+      this.router.navigate(['/dashboard/products']);
+      this.MessageService.add({
+        severity: 'error',
+        summary: 'Success',
+        detail: 'Add Success',
+      });
+    });
+    // console.log(studentData);
   };
 }
