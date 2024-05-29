@@ -1,3 +1,4 @@
+<p-toast />
 <h1>Add new</h1>
 <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="flex flex-col">
   <input type="text" placeholder="Name" formControlName="name" />
@@ -11,13 +12,13 @@
     >Email required</span
   >
   <input type="text" placeholder="Adress" formControlName="address" />
-  <input type="text" placeholder="Class Name" formControlName="className" />
-  <input type="text" placeholder="Phone Number" formControlName="phoneNumber" />
+
+  <input type="text" placeholder="Phone Number" formControlName="className" />
   <span
     *ngIf="
-      studentForm.controls.phoneNumber.errors?.['required'] &&
-      (studentForm.controls.phoneNumber.dirty ||
-        studentForm.controls.phoneNumber.touched)
+      studentForm.controls.className.errors?.['required'] &&
+      (studentForm.controls.className.dirty ||
+        studentForm.controls.className.touched)
     "
     >Not right format phone number</span
   >

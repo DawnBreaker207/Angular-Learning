@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Student } from '../../../interface/Student';
+import { StudentService } from '../../student.service';
 
 @Component({
   selector: 'app-student-add',
@@ -7,6 +8,7 @@ import { Student } from '../../../interface/Student';
   styleUrl: './student-add.component.css',
 })
 export class StudentAddComponent {
+  
   @Input() addStudent: any;
   name: string = '';
   age: number = 19;
