@@ -22,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { DeleteComponent } from './components/delete/delete.component';
+import { SiginComponent } from './components/sigin/sigin.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { DeleteComponent } from './components/delete/delete.component';
     ClientComponent,
     StudentEditComponent,
     DeleteComponent,
+    SiginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

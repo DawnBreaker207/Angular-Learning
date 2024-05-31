@@ -688,5 +688,12 @@
       "id": 24
     }
   ],
-  "user": []
+  "users": [
+    {
+      "email": "dafuk@gmail.com",
+      "password": "$2a$10$VHatJvfuIQ.m87CwJhEl6erbNLxW7Q9VAq3XJipOreyc9uENhLBy6",
+      "name": "4324432",
+      "id": 1
+    }
+  ]
 }

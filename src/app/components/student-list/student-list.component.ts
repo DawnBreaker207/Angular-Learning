@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Student } from '../../../interface/Student';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import axios from 'axios';
-import { StudentService } from '../../student.service';
-import { MessageService } from 'primeng/api';
 import { ActivatedRoute } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { Student } from '../../../interface/Student';
+import { StudentService } from '../../student.service';
 
 @Component({
   selector: 'app-student-list',
