@@ -1,4 +1,4 @@
-<p-toast />
+<!-- <p-toast /> -->
 <a href="dashboard/add">Add new</a>
 <table class="w-full my-6">
   <thead class="bg-[#ccc]">
@@ -21,7 +21,7 @@
         <a href="/dashboard/edit/{{ item.id }}">Edit</a>
       </td>
       <td class="border p-2">
-        <a href="/dashboard/delete/{{ item.id }}">Delete</a>
+        <button (click)="onSubmit(item.id)">Delete</button>
       </td>
     </tr>
   </tbody>

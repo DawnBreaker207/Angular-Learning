@@ -555,14 +555,6 @@
   ],
   "students": [
     {
-      "name": "4324234",
-      "age": 43,
-      "address": "ldieprroe",
-      "className": "idorieoe",
-      "email": "",
-      "id": 1
-    },
-    {
       "name": "lmao433",
       "age": 34,
       "address": "lmsoer",
@@ -598,15 +590,6 @@
       "id": 12
     },
     {
-      "name": "lmadod",
-      "age": 12,
-      "address": "432ldoire",
-      "className": "loire",
-      "phoneNumber": "08475935445",
-      "email": "lmao@gmail.com",
-      "id": 13
-    },
-    {
       "name": "4234324",
       "age": 42,
       "address": "oireppd",
@@ -614,14 +597,6 @@
       "phoneNumber": "0394854",
       "email": "lmao@gmail.com",
       "id": 15
-    },
-    {
-      "name": "43",
-      "age": 0,
-      "address": "43",
-      "className": "43",
-      "email": "43",
-      "id": 16
     },
     {
       "name": "lmao",
@@ -662,30 +637,6 @@
       "className": "423432",
       "email": "432424",
       "id": 21
-    },
-    {
-      "name": "lmao",
-      "age": 98,
-      "address": "432432",
-      "className": "423432",
-      "email": "432424",
-      "id": 22
-    },
-    {
-      "name": "42432",
-      "age": 0,
-      "address": "432432",
-      "className": "432432",
-      "email": "432432",
-      "id": 23
-    },
-    {
-      "name": "4322524",
-      "age": 0,
-      "address": "5353453",
-      "className": "5353534",
-      "email": "53453253",
-      "id": 24
     }
   ],
   "users": [
@@ -694,6 +645,12 @@
       "password": "$2a$10$VHatJvfuIQ.m87CwJhEl6erbNLxW7Q9VAq3XJipOreyc9uENhLBy6",
       "name": "4324432",
       "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$2OA3m5PiVa4VTd4U8bJHMeDDCak8veWMRaNddpD5WiAxkQcInRmOO",
+      "name": "Tung Anh",
+      "id": 2
     }
   ]
 }

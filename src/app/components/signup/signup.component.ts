@@ -11,15 +11,14 @@ import { User } from '../../../interface/User';
 })
 export class SignupComponent {
   constructor(private AuthenService: AuthenService, private route: Router) {}
-  signupForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
+  signinForm = new FormGroup({
     email: new FormControl('', [Validators.email]),
     password: new FormControl('', [Validators.minLength(9)]),
   });
   user: User[] = [];
   // route = new Router();
   onSubmit = () => {
-    this.AuthenService.Sign_Up(this.signupForm.value as User).subscribe(
+    this.AuthenService.Sign_Up(this.signinForm.value as User).subscribe(
       (data) => {
         alert(`Sign Up success`);
         this.route.navigate(['/']);

@@ -47,17 +47,10 @@ export class StudentListComponent {
     });
   }
 
-  onSubmit = () => {
-    this.StudentService.Delete_Student(this.studentId).subscribe((data) => {
-      alert('Success');
-
-      console.log(this.studentId);
+  onSubmit = (productId: any) => {
+    this.StudentService.Delete_Student(productId).subscribe((data) => {
+      this.student = this.student.filter((product) => product.id !== productId);
       console.log(data);
-      this.MessageService.add({
-        severity: 'error',
-        summary: 'Success',
-        detail: 'Add Success',
-      });
     });
     // console.log(studentData);
   };

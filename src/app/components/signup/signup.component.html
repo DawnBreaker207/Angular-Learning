@@ -1,26 +1,5 @@
 <p>signup works!</p>
-<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="max-w-sm mx-auto">
-  <div class="mb-5">
-    <label
-      for="name"
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >Your name</label
-    >
-    <input
-      type="name"
-      id="name"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder="User Name"
-      formControlName="name"
-    />
-    <span
-      *ngIf="
-      signupForm.controls.name.errors?.['required'] &&
-      (signupForm.controls.name.dirty || signupForm.controls.name.touched)
-    "
-      >Name required</span
-    >
-  </div>
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class="max-w-sm mx-auto">
   <div class="mb-5">
     <label
       for="email"
@@ -36,15 +15,15 @@
     />
     <span
       *ngIf="
-      signupForm.controls.email.errors?.['required'] &&
-      (signupForm.controls.email.dirty || signupForm.controls.email.touched)
+      signinForm.controls.email.errors?.['required'] &&
+      (signinForm.controls.email.dirty || signinForm.controls.email.touched)
     "
       >Email required</span
     >
     <span
       *ngIf="
-        signupForm.controls.email.hasError('email') &&
-        (signupForm.controls.email.dirty || signupForm.controls.email.touched)
+        signinForm.controls.email.hasError('email') &&
+        (signinForm.controls.email.dirty || signinForm.controls.email.touched)
       "
       class="font-bold text-red-500"
       >Right format Email</span
@@ -64,16 +43,16 @@
     />
     <span
       *ngIf="
-      signupForm.controls.password.errors?.['required'] &&
-      (signupForm.controls.password.dirty || signupForm.controls.password.touched)
+      signinForm.controls.password.errors?.['required'] &&
+      (signinForm.controls.password.dirty || signinForm.controls.password.touched)
     "
       >Password required</span
     >
     <span
       *ngIf="
-        signupForm.controls.password.hasError('minlength') &&
-        (signupForm.controls.password.dirty ||
-          signupForm.controls.password.touched)
+        signinForm.controls.password.hasError('minlength') &&
+        (signinForm.controls.password.dirty ||
+          signinForm.controls.password.touched)
       "
       class="font-bold text-red-500"
       >Password to short</span

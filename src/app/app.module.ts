@@ -21,7 +21,6 @@ import { ClientComponent } from './layout/client/client.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
-import { DeleteComponent } from './components/delete/delete.component';
 import { SiginComponent } from './components/sigin/sigin.component';
 import { SignupComponent } from './components/signup/signup.component';
 
@@ -39,7 +38,7 @@ import { SignupComponent } from './components/signup/signup.component';
     AdminComponent,
     ClientComponent,
     StudentEditComponent,
-    DeleteComponent,
+
     SiginComponent,
     SignupComponent,
   ],
